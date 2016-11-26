@@ -227,13 +227,13 @@
 
     "installFrontendScriptName": "install_frontend.sh",
 
-    "installFrontendScriptUri": "[concat('https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/moodle-cluster-ubuntu/', variables('installFrontendScriptName'))]",
+    "installFrontendScriptUri": "[concat('https://raw.githubusercontent.com/JTMartins/azure_scripts/master/', variables('installFrontendScriptName'))]",
 
     "installFrontendCommand": "[concat('sh ', variables('installFrontendScriptName'), ' ', parameters('mySqlPassword'), ' ', variables('newStorageAccountName'), ' ', variables('SharedAzureFileName'), ' ', parameters('fullNameOfSite'), ' ', parameters('shortNameOfSite'), ' ', parameters('moodleAdminUsername'), ' ', parameters('moodleAdminPassword'), ' ', parameters('moodleAdminEmail'), ' ', parameters('moodleVersion'), ' ', parameters('installOfficePlugins'))]",
 
     "installBackendScriptName": "install_backend.sh",
 
-    "installBackendScriptUri": "[concat('https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/moodle-cluster-ubuntu/', variables('installBackendScriptName'))]",
+    "installBackendScriptUri": "[concat('https://raw.githubusercontent.com/JTMartins/azure_scripts/master/', variables('installBackendScriptName'))]",
 
     "installBackendCommand": "[concat('sh ', variables('installBackendScriptName'), ' ', parameters('mySqlPassword'), ' ', variables('newStorageAccountName'), ' ', variables('SharedAzureFileName'))]",
 
