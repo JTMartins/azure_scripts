@@ -1,0 +1,74 @@
+﻿{
+
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+
+  "contentVersion": "1.0.0.0",
+
+  "parameters": {
+
+    "uniqueNamePrefix": {
+
+      "value": "GEN-UNIQUE-8"
+
+    },
+
+    "adminUsername": {
+
+      "value": "GEN-UNIQUE-8"
+
+    },
+
+    "adminPassword": {
+
+      "value": "GEN-PASSWORD"
+
+    },
+
+    "mySqlPassword": {
+
+      "value": "GEN-PASSWORD"
+
+    },
+
+    "fullNameOfSite": {
+
+      "value": "fullNameOfSite"
+
+    },
+
+    "shortNameOfSite": {
+
+      "value": "shortNameOfSite"
+
+    },
+
+
+
+    "webVMCount": {
+
+        "value": 1
+
+    },
+
+    "vmSize": {
+
+      "value": "Standard_D1_v2"
+
+    },
+
+    "vmSizeDB": {
+
+      "value": "Standard_D1_v2"
+
+    },
+
+
+    "installOfficePlugins": {
+
+      "value": true
+
+    }
+
+  }
+
+}
