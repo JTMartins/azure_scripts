@@ -1,12 +1,12 @@
 ﻿#!/bin/bash
 
-apt-get -y update
+sudo apt-get -y update
 
-apt-get -y install python-software-properties
+sudo apt-get -y install python-software-properties
 
-add-apt-repository -y ppa:ondrej/php5-5.6
+sudo add-apt-repository -y ppa:ondrej/php
 
-apt-get -y update
+sudo apt-get -y update
 
 
 
@@ -22,27 +22,27 @@ SharedStorageAccountKey=$4
 
 export DEBIAN_FRONTEND=noninteractive
 
-echo mysql-server-5.6 mysql-server/root_password password $dbpass | debconf-set-selections
+sudo echo mysql-server-5.6 mysql-server/root_password password $dbpass | debconf-set-selections
 
-echo mysql-server-5.6 mysql-server/root_password_again password $dbpass | debconf-set-selections
+sudo echo mysql-server-5.6 mysql-server/root_password_again password $dbpass | debconf-set-selections
 
 
 
 # install the LAMP stack
 
-apt-get -y install apache2 mysql-client mysql-server php5.6
+sudo apt-get -y install apache2 mysql-client mysql-server php5.6
 
 
 
 # install Extra PHP requirements
 
-apt-get -y install php5.6-curl php5.6-gd php5-ldap php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml
+sudo apt-get -y install php5.6-curl php5.6-gd php5-ldap php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml
 
 
 
 # Allow remote connection
 
-sed -i "s/bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+sudo sed -i "s/bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
 
 
 
@@ -68,15 +68,15 @@ $MYSQL -uroot -p$dbpass -e "$SQL"
 
 
 
-apt-get -y install nodejs-legacy
+sudo apt-get -y install nodejs-legacy
 
-apt-get -y install npm
+sudo apt-get -y install npm
 
-npm install -g azure-cli
+sudo npm install -g azure-cli
 
 
 
-sudo azure storage share create $SharedAzureFileName -a $SharedStorageAccountName -k $SharedStorageAccountKey
+azure storage share create $SharedAzureFileName -a $SharedStorageAccountName -k $SharedStorageAccountKey
 
 
 
@@ -85,10 +85,10 @@ sudo azure storage share create $SharedAzureFileName -a $SharedStorageAccountNam
 
 # restart MySQL
 
-service mysql restart
+sudo service mysql restart
 
 
 
 # restart Apache
 
-apachectl restart
+sudo apachectl restart
