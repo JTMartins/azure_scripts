@@ -230,7 +230,7 @@
 
     "installFrontendScriptUri": "[concat('https://raw.githubusercontent.com/JTMartins/azure_scripts/master/', variables('installFrontendScriptName'))]",
 
-    "installFrontendCommand": "[concat('sh ', variables('installFrontendScriptName'), ' ', parameters('mySqlPassword'), ' ', variables('newStorageAccountName'), ' ', variables('SharedAzureFileName'), ' ', parameters('fullNameOfSite'), ' ', parameters('shortNameOfSite'), ' ', parameters('moodleAdminUsername'), ' ', parameters('moodleAdminPassword'), ' ', parameters('moodleAdminEmail'), ' ', parameters('moodleVersion'), ' ', parameters('installOfficePlugins'))]",
+    "installFrontendCommand": "[concat('sh ', variables('installFrontendScriptName'), ' ', parameters('mySqlPassword'), ' ', variables('newStorageAccountName'), ' ', variables('SharedAzureFileName'), ' ', parameters('fullNameOfSite'), ' ', parameters('shortNameOfSite'), ' ', parameters('installOfficePlugins'))]",
 
     "installBackendScriptName": "install_backend.sh",
 
